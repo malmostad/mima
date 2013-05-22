@@ -16,36 +16,36 @@ Ie: it just opens the div that has both a specific "id" +. Class * /
 
 $(document).ready(function(){
 
-$("#event-text-2.status_event_large").css('display','none'); /*döljer texten till "inkommen" statusen*/
-$("#event-text-3.status_event_large").css('display','none'); /*döljer texten till "inkommen" statusen*/
-$("#event-text-4.status_event_large").css('display','none'); /*döljer texten till "inkommen" statusen*/
+$("#event-text-2.status_event_large").css('display','none'); /*dï¿½ljer texten till "inkommen" statusen*/
+$("#event-text-3.status_event_large").css('display','none'); /*dï¿½ljer texten till "inkommen" statusen*/
+$("#event-text-4.status_event_large").css('display','none'); /*dï¿½ljer texten till "inkommen" statusen*/
 
 $('.status_event_small').click(function(){ 
 	var id = $(this).attr('id');
 	switch(id){
 	case 'event-1':
-	$('#event-1_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*byter pil icon vid klick*/
-	$("#event-text-1.status_event_large").slideToggle();
+	$('#event-1_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*switches arrow icon on click*/
+	$("#event-text-1.status_event_large").slideToggle(); /*shows the full_status div*/
 	break;
 	case 'event-2':
-	$('#event-2_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*byter pil icon vid klick*/
-	$("#event-text-2.status_event_large").slideToggle(); /*öppnar upp .full_status div:en*/
+	$('#event-2_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*switches arrow icon on click*/
+	$("#event-text-2.status_event_large").slideToggle(); /*shows the full_status div*/
 	break;
 	case 'event-3':
-	$('#event-3_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*byter pil icon vid klick*/
-	$("#event-text-3.status_event_large").slideToggle(); /*öppnar upp .full_status div:en*/
+	$('#event-3_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*switches arrow icon on click*/
+	$("#event-text-3.status_event_large").slideToggle(); /*shows the full_status div*/
 	break;
 	case 'event-4':
-	$('#event-4_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*byter pil icon vid klick*/
-	$("#event-text-4.status_event_large").slideToggle(); /*öppnar upp .full_status div:en*/
+	$('#event-4_icon').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*switches arrow icon on click*/
+	$("#event-text-4.status_event_large").slideToggle(); /*shows the full_status div*/
 	break;
 	}
 	});
 });
-/***************PÅGÅENDE ÄRENDEN OCH AVSLUTADE ÄRENDEN ********************************/
+/***************PÃ…GÃ…ENDE Ã„RENDEN OCH AVSLUTADE Ã„RENDEN ********************************/
 
 $(document).ready(function(){
-	$('.pagaende_arende_small').click(function(){ /*vid klick på -.small_status div:en*/
+	$('.pagaende_arende_small').click(function(){ /*vid klick pï¿½ -.small_status div:en*/
 	$('#pagaende_arrow').toggleClass('icon-angle-up icon-2x icon-angle-down icon-2x'); /*byter pil icon vid klick*/
 	$('.pagaende_arende_large').slideToggle("slow"); 
 		});
@@ -53,10 +53,10 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-		/*AVSLUTADE ÄRENDEN*/
-	$('.avslutade_arenden_small').click(function(){ /*vid klick på -.small_status div:en*/
+		/*AVSLUTADE Ã„RENDEN*/
+	$('.avslutade_arenden_small').click(function(){ 
 	$('#avslutade_arrow').toggleClass('icon-angle-down icon-2x icon-angle-up icon-2x'); /*byter pil icon vid klick*/
-	$(".avslutade_arenden_large").slideToggle(); /*öppnar upp .full_status div:en*/
+	$(".avslutade_arenden_large").slideToggle(); /*shows the full_status div*/
 	});
 });
 /***************************************************************************************/
