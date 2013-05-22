@@ -1,0 +1,113 @@
+<!--
+Designed and developed by:
+Jakob Ebbinger
+Robert Karlsson
+Joakim Lundkvist
+Anders Sipinen
+Sandra Sosa
+-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malmö Stad | proto</title>
+<link type="text/css" href="css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/corner-alert.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/toggleScript.js"></script> 
+</head>
+<body>
+<div class="gridContainer clearfix">
+
+<div id="header">
+  <div id="logo"><img src="img/malmo-stad-logo.png" alt="malmö stad"></div>
+  <div id="title"><h1>Mina Sidor</h1></div>
+</div>
+  
+<div id="navbar">
+  <ul>
+    <li><a href="index.html" tabindex="1" class="notactive"><i class="icon-user icon-2x"></i></a></li>
+    <li><a href="settings.html" tabindex="2" class="active"><i class="icon-cog icon-2x"></i></a></li>
+  </ul>
+</div>
+
+<nav>
+  <ul id="navbar-desktop" class="nav nav-list">
+    <li><a href="index.html" class="notactive">Pågående ärenden</a></li>
+    <li>
+      <ul class="nav nav-list">
+        <li><a href="inkomna.html" class="notactive">Inkomna</a></li>
+        <li><a href="under-behandling.html" class="notactive">Under behandling</a></li>       
+      </ul>
+    </li>
+    <li><a href="avslutade.html" class="notactive">Avslutade ärenden</a></li>
+    <li><a href="settings.html" class="active">Inställningar</a></li>
+  </ul>
+</nav>
+
+<div id="content">
+  <div id="desktop_arende_box"><!--ENBART FÖR DESKTOP, GÖMS I ÖVRIGA FALL-->
+    <h2>Inställningar</h2>
+    <section_settings_desktop>
+      <form>
+        <fieldset>
+          <p>Vänligen fyll i dina uppgifter nedan så att vi kan meddela dig när:</p>
+          <ul>
+            <li>Ditt ärende har fått ett beslut</li>
+            <li>Ditt ärende behöver kompletteras</li>
+            <li>Ditt ärende kräver annan åtgärd av dig</li>
+          </ul>
+          <label>Mail</label>
+          <input type="text" placeholder="Mailadress"/>
+          <label>SMS</label>
+          <input type="text" placeholder="Telefonnummer" /><br/><br/> 
+          <br/> 
+          <p class="btn pull-left">Spara</p>
+        </fieldset>
+      </form>
+    </section>
+  </div><!--/desktop_arende_box-->
+  
+  <div id="arende_box_settings"><!--endast mobil/tablets-->
+  <h2>Inställningar</h2>
+        <form>
+          <fieldset>
+            <p>Vänligen fyll i dina uppgifter nedan så att vi kan meddela dig när:</p>
+            <ul>
+              <li>Ditt ärende har fått ett beslut</li>
+              <li>Ditt ärende behöver kompletteras</li>
+              <li>Ditt ärende kräver annan åtgärd av dig</li>
+            </ul>
+            <label>Mail</label>
+            <input type="text" placeholder="Mailadress"/>
+            <label>SMS</label>
+            <input type="text" placeholder="Telefonnummer" /><br/><br/> 
+            <br/> 
+            <p class="btn pull-left">Spara</p>
+          </fieldset>
+        </form>
+  </div><!--/arende_box-->
+</div><!--content-->
+  
+	<div class="footer">
+      <h4>Kontakta oss:</h4>
+      <p>minasidor@malmo.se <br>
+      tel: 040-00 00 00</p>
+	</div><!--/footer-->
+  
+  
+</div> <!--clearfix-->
+</body>
+</html>

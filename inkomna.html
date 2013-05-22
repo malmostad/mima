@@ -20,7 +20,7 @@ Sandra Sosa
 <link type="text/css" href="css/font-awesome.min.css" rel="stylesheet">
 <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" type="text/css">
-
+<link href="css/corner-alert.css" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -38,25 +38,17 @@ Sandra Sosa
   
 <div id="navbar">
   <ul>
-    <li>
-      <a href="index.html" tabindex="1" class="active">
-        <i class="icon-user icon-2x"></i>
-      </a>
-    </li>
-    <li>
-      <a href="settings.html" tabindex="2" class="notactive">
-        <i class="icon-cog icon-2x"></i>
-      </a>
-    </li>
+    <li><a href="index.html" tabindex="1" class="active"><i class="icon-user icon-2x"></i></a></li>
+    <li><a href="settings.html" tabindex="2" class="notactive"><i class="icon-cog icon-2x"></i></a></li>
   </ul>
 </div>
 
 <nav>
   <ul id="navbar-desktop" class="nav nav-list">
-    <li><a href="index.html" class="active">Pågående ärenden</a></li>
+    <li><a href="index.html" class="notactive">Pågående ärenden</a></li>
     <li>
       <ul class="nav nav-list">
-        <li><a href="inkomna.html" class="notactive">Inkomna</a></li>
+        <li><a href="inkomna.html" class="active">Inkomna</a></li>
         <li><a href="under-behandling.html" class="notactive">Under behandling</a></li>       
       </ul>
     </li>
@@ -67,66 +59,6 @@ Sandra Sosa
 
 <div id="content">
   <div id="desktop_arende_box"><!--ENBART FÖR DESKTOP, GÖMS I ÖVRIGA FALL-->
-
-    <section class="corner-alert">
-      <h3>Anmälan till förskola</h3>
-      <span class="btn btn-warning btn-small pull-right">Åtgärda!</span> 
-      <section class="progressbar">
-        <ol id="prgr_bar" class="progressbar">
-        <li id="one" class="prgr_done">Inkommen<div class="arrow_box_done"></li>
-        <li id="two" class="prgr_active">Under behandling<div class="arrow_box_active"></li>
-        <li id="three" class="prgr_todo">Beslutad</li>
-        </ol>
-      </section> 
-      
-      <h5>2013-04-15 - Åtgärd krävs</h5>
-      <p>Ingen av dina valda förskolor hade lediga platser. <br />
-      Vänligen välj tre nya skolor som är av intresse för dig.</p>
-      
-      <details>
-        <summary class="btn pull-right">Tidigare händelser</summary>
-        <h5>2013-04-11 - Under behandling</h5>
-        <p>Ditt ärende har skickats till dina valda förskolor för behandling. <br />
-        Vi återkommer när vi har mer information att ge dig.</p>
-        
-        <h5>2013-04-08 - Under behandling</h5>
-        <p>Ditt ärende har har registrerats hos oss och förbereds för vidareskickning.<br />
-        Vi återkommer när vi har mer information att ge dig.</p>
-        
-        <h5>2013-04-01 - Inkommen</h5>
-        <p>Ditt ärende har har tagits emot av oss vi kontrollerar dina uppgifter.<br />
-        Vi återkommer när vi har mer information att ge dig.</p>
-      </details>
-      <span class="clearfix"></span>
-    </section>
-    
-    <section>
-      <h3>Intresseanmälan för odlingslott</h3>
-      <section class="progressbar">
-        <ol id="prgr_bar" class="progressbar">
-        <li id="one" class="prgr_done">Inkommen<div class="arrow_box_done"></li>
-        <li id="two" class="prgr_active">Under behandling<div class="arrow_box_active"></li>
-        <li id="three" class="prgr_todo">Beslutad</li>
-        </ol>
-      </section>
-      
-      <h5>2013-03-15 - Under behandling</h5>
-      <p>Vi kollar om platsen är: <br />
-      1: Tillåten att odla på. <br />
-      2: <em>Går</em> att odla på. <br />
-      3: Ligger tillräckligt nära dig. <br />
-      Vi återkommer när vi vet mer.</p>
-      <details>
-        <summary class="btn pull-right">Tidigare händelser</summary>
-        <h5>2013-03-01 - Under behandling</h5>
-        <p>Ditt ärende har har registrerats hos oss och förbereds för vidareskickning.<br />
-        Vi återkommer när vi har mer information att ge dig.</p>
-        <h5>2013-02-27 - Inkommen</h5>
-        <p>Ditt ärende har har tagits emot av oss vi kontrollerar dina uppgifter.<br />
-        Vi återkommer när vi har mer information att ge dig.</p>
-      </details>
-      <span class="clearfix"></span>
-    </section>
             
     <section>
       <h3>Medgivande av sotning</h3>
@@ -160,22 +92,22 @@ Sandra Sosa
       </div><!--/pagaende_arende_small-->
   
       <div class="pagaende_arende_large"> 
-						<a href="#myModal" data-toggle="modal" class="make-div-clickable">
-							<div class="arende-som-ska-listas newInfoAlert">
-								<div class="pagaende_arende_alert">Kräver åtgärd <span class="badge">!</span></div>
-									<div class="arende-beskrivning">Ansökan till förskola</div>
-									<div class="arende-status-och-datum">Behandlas <br> 2013-03-04</div>					
-							</div>
-						</a>
+            <a href="#myModal" data-toggle="modal" class="make-div-clickable">
+              <div class="arende-som-ska-listas newInfoAlert">
+                <div class="pagaende_arende_alert">Kräver åtgärd <span class="badge">!</span></div>
+                  <div class="arende-beskrivning">Ansökan till förskola</div>
+                  <div class="arende-status-och-datum">Behandlas <br> 2013-03-04</div>          
+              </div>
+            </a>
         
-						<div id="alertTest" class="arende-som-ska-listas">
-							<div class="arende-beskrivning">Intresseanmälan för odlingslott</div>
-							<div class="arende-status-och-datum">Registrerad <br> 2013-03-15</div>					
-						</div>
+            <div id="alertTest" class="arende-som-ska-listas">
+              <div class="arende-beskrivning">Intresseanmälan för odlingslott</div>
+              <div class="arende-status-och-datum">Registrerad <br> 2013-03-15</div>          
+            </div>
         
         <div class="arende-som-ska-listas">
         <div class="arende-beskrivning">Medgivande av sotning</div>
-        <div class="arende-status-och-datum">Inkommen <br> 2013-03-04</div>					
+        <div class="arende-status-och-datum">Inkommen <br> 2013-03-04</div>         
         </div>
       </div><!--/pagaende_arende_large-->
     </div><!--/arende-filler-->
@@ -192,7 +124,7 @@ Sandra Sosa
           <div class="avslutade_arenden_large">
           <div class="arende-som-ska-listas">
           <div class="arende-beskrivning">Ansökan om inackorderingsbidrag</div>
-          <div class="arende-status-och-datum">Beslutad <br> 2005-04-01</div>					
+          <div class="arende-status-och-datum">Beslutad <br> 2005-04-01</div>         
           </div>
         </div><!--/avslutade_arenden_large-->
       </div><!--/arende-filler-->
@@ -226,26 +158,26 @@ Sandra Sosa
   <div id="event-1" class="status_event_small event_descrip"><h5>2013-04-15 - Åtgärd krävs<i id="event-1_icon" class="icon-angle-up icon-2x arrow_icon "></i></h5></div>  <!--/status_small-->
   
   <div id="event-text-1" class="status_event_large event_descrip">
-	<p class="event_descrip">Ingen av dina valda förskolor hade lediga platser.
-	Vänligen välj tre nya skolor som är av intresse för dig.</p><br/>
+  <p class="event_descrip">Ingen av dina valda förskolor hade lediga platser.
+  Vänligen välj tre nya skolor som är av intresse för dig.</p><br/>
   </div>
   
-    <div id="event-2" class="status_event_small event_descrip"><h5>2013-04-11 -  Under behandling<i id="event-2_icon" class="icon-angle-down icon-2x arrow_icon "></i></h5></div>			<!--/status_small-->
+    <div id="event-2" class="status_event_small event_descrip"><h5>2013-04-11 -  Under behandling<i id="event-2_icon" class="icon-angle-down icon-2x arrow_icon "></i></h5></div>     <!--/status_small-->
   <div id="event-text-2" class="status_event_large">
-	<p class="event_descrip">Ditt ärende har skickats till dina valda förskolor för behandling. <br>
-	Vi återkommer när vi har mer information att ge dig.</p><br/>
+  <p class="event_descrip">Ditt ärende har skickats till dina valda förskolor för behandling. <br>
+  Vi återkommer när vi har mer information att ge dig.</p><br/>
   </div>
   
-  <div id="event-3" class="status_event_small event_descrip"><h5>2013-04-08 -  Under behandling<i id="event-3_icon" class="icon-angle-down icon-2x arrow_icon "></i></h5></div>			<!--/status_small-->
+  <div id="event-3" class="status_event_small event_descrip"><h5>2013-04-08 -  Under behandling<i id="event-3_icon" class="icon-angle-down icon-2x arrow_icon "></i></h5></div>     <!--/status_small-->
   <div id="event-text-3" class="status_event_large">
-	<p class="event_descrip">Ditt ärende har har registrerats hos oss och förbereds för vidareskickning.<br>
-	Vi återkommer när vi har mer information att ge dig.</p><br/>
+  <p class="event_descrip">Ditt ärende har har registrerats hos oss och förbereds för vidareskickning.<br>
+  Vi återkommer när vi har mer information att ge dig.</p><br/>
   </div>
   
-    <div id="event-4" class="status_event_small event_descrip"><h5>2013-04-01 - Inkommen<i id="event-4_icon" class="icon-angle-down icon-2x arrow_icon "></i></h5></div>				<!--/status_small-->
+    <div id="event-4" class="status_event_small event_descrip"><h5>2013-04-01 - Inkommen<i id="event-4_icon" class="icon-angle-down icon-2x arrow_icon "></i></h5></div>        <!--/status_small-->
   <div id="event-text-4" class="status_event_large">
-	<p class="event_descrip">Ditt ärende har har tagits emot av oss vi kontrollerar dina uppgifter.<br>
-	Vi återkommer när vi har mer information att ge dig.</p><br/>
+  <p class="event_descrip">Ditt ärende har har tagits emot av oss vi kontrollerar dina uppgifter.<br>
+  Vi återkommer när vi har mer information att ge dig.</p><br/>
   </div>
   </div><!--/statusbox-->
 </div><!--/myModal-->

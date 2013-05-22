@@ -1,0 +1,1207 @@
+/*
+======================
+Designed and developed by:
+Jakob Ebbinger
+Robert Karlsson
+Joakim Lundkvist
+Anders Sipinen
+Sandra Sosa
+======================
+*/
+@charset "UTF-8";
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+body {
+	background: #fff;
+	font-family:'Trebuchet MS','DejaVu Sans','Bitstream Vera Sans',sans-serif!important;
+}
+/*
+	Colorchart:
+	Background menu #F9FDFF (Ljusblå)
+	Background section #F6F6F6 (Ljusgrå)
+	Activ progress arrow #0C9FD6 (tokblå)
+*/
+/* 
+==============================================
+=======Desktop Layout: a max of 1232px to 769px=======
+==============================================
+*/
+body {
+    background-color: #FFF;
+}
+section {
+    padding: 3%;
+    border-bottom: 1px solid #A5A59F;
+	border-top: 1px solid #fff;
+	margin: 0 0 20px 0;
+	background-color: #F6F6F6;
+
+}
+section_settings_desktop {
+	padding: 3%;
+    margin: 0 5px 20px 0;
+}
+
+section h3 {
+display: inline;
+}
+
+/*wrapper div*/
+.gridContainer {
+	width: 100%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+	padding-top: 1.28%;
+	padding-bottom: 1.82%;
+}
+/**/
+#header {
+	width:74.4%;
+	margin:0 auto;
+	height:70px;
+	margin-left: 12.5%;
+	background-color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+/**/
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 16.6666%;
+}
+/**/
+#title h1 {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 79.1666%;
+}
+/**/
+#navbar {display: none;}
+
+/**/
+#navbar-desktop { 
+	float: left;
+	margin-left: 12.5%;
+	margin-top: 1.5%;
+	width:16%;
+	padding: 5px 0 5px 5px;
+	background-color:#FFF;
+}
+/**/
+.nav-list li{
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid #A5A59F;
+	border-top: 1px solid #fff;
+	background-color: #F9FDFF;
+}
+/**/
+.nav-list>li>a {
+	background: none;
+	color: #333;
+	padding: 10px;
+}
+/**/
+li > ul.nav-list{padding: 0;}
+
+/**/
+li > ul.nav-list > li > a{padding-left: 25px;}
+
+/**/
+.nav-list li a.active{
+	background-color: #0C9FD6;
+	color: #fff;
+	height: 100%;
+}
+/**/
+.nav-list li ul li{
+	border-top: none;
+}
+/**/
+.nav-list li ul li:last-child{
+	border: none;
+}
+/**/
+#content {
+    float: left;
+	margin-left: 0;
+	margin-top: 1.5%;
+	padding: 5px 0 5px 5px;
+	margin-left: 1%;
+	width: 56.7%;	
+	display: block;
+}
+/**/
+.corner-alert {position: relative;}
+
+/**/
+.corner-alert:before {
+   content:"";
+   position:absolute;
+   top:0;
+   right:0;
+   border-width:20px 20px 20px 20px;
+   border-style:solid;
+   border-color:
+   rgba(255,150,20, 1) 
+   rgba(255,150,20, 1)
+   rgba(255,255,255, 0.1) 
+   rgba(255,255,255, 0.1);
+   display:block; width:0; /* Firefox 3.0 skademinskning*/
+}
+
+/**/
+#arende_box {display:none;}
+
+/**/
+#arende_box_settings {display:none;}
+
+/**/
+.active {
+	text-decoration:none;
+	color:#fff;
+	background-color:#00693C;
+	padding: 7px 0 0 0;
+	padding-bottom:5px;
+}
+/**/
+.notactive {
+	color:black;
+	text-decoration:none;
+	background-color:#fff;
+	padding: 5px 0 0 0;
+	padding-bottom: 7px;
+}
+/**/
+.notactive:hover {
+	text-decoration:none;
+	color:#fff;
+}
+
+/**/
+li {list-style:none;}
+
+/*Footer*/
+.footer {
+	clear: both;
+	float: left;
+	background-color:#F9FDFF;
+	padding-left: 0;
+	padding-right: 0;
+}
+.footer {
+	height: auto;
+	width: 57%;
+	margin-top: 15px;
+	margin-left: 29.8%;
+}
+.footer h4 {
+	font-family:georgia;
+	text-align: center;
+	font-style:italic;
+}
+.footer p {
+	text-align: center;
+	font-size:1.1em;
+}
+
+/*====PROGRESSBAR====*/
+section.progressbar {
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+	box-shadow: none;
+	border:none;
+	background-color: transparent;
+}
+/**/
+ol.progressbar {
+	margin: 2% auto;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	font-style: italic;
+}
+/**/
+ol.progressbar li {
+	display: inline-block;
+	text-align: center;
+	width:24%; /*20% för tre stycken*/
+	vertical-align: top;
+	height: 30px;
+	margin-right: 6%;
+	padding-top: 12px;
+}
+
+/**/
+ol.progressbar li#three {margin-right: 0;}
+
+/*Color on finished milestones*/
+ol.progressbar li.prgr_active {
+	color: white;
+	background-color: #0C9FD6;
+}
+/*Color on remaining milestones*/
+ol.progressbar li.prgr_done, ol.progressbar li.prgr_todo {
+	color: white; 
+	background-color: silver;
+}
+/*Progressbar end*/
+
+
+/*===ARROWS FOR THE PROGRESSBAR===*/
+.arrow_box_active {
+	position: relative;
+	background: silver;
+}
+/**/
+.arrow_box_active:after {
+	left: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+/**/
+.arrow_box_active:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-left-color: #0C9FD6;
+	border-width: 21px;
+	top: 50%;
+	margin-top: -32px;
+}
+/**/
+.arrow_box_done {
+	position: relative;
+	background: silver;
+}
+/**/
+.arrow_box_done:after {
+	left: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+/**/
+.arrow_box_done:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-left-color: silver;
+	border-width: 21px;
+	top: 50%;
+	margin-top: -32px;
+}
+/*----arrows ends---*/
+
+/**/
+.nav-list li a:link {text-decoration:none;}
+.nav-list li a:visited {text-decoration:none;}
+
+/**/
+.nav-list li a:hover {
+	text-decoration:none;
+	background-color: rgb(255,150,20);
+	color: #fff;
+}
+/**/
+.nav-list li a:active {text-decoration:none;}
+
+/* 
+==============================================
+===========Tablet Layout: 769px to 481px============
+==============================================
+*/
+@media only screen and (max-width: 769px) {
+	
+/********OVERRIDE TO BOOTSTRAPS MODAL***/
+.modal {
+	width: 90%; 
+	left: 5%; /* (100%-width)/2 */
+	margin: auto auto auto auto; /* center*/
+	overflow-y: scroll; /*  sets the modal to be scroll-able */
+	-webkit-overflow-scrolling: touch; /* avoiding 2finger scroll on iOS    */
+}
+
+.modal.fade.in {
+top:5px;
+}
+
+.modal-body{
+	/* Increase the max height of the modal body to try & avoid both it,
+	* and the modal container having scroll bars which results in odd behavior */ 
+	max-height: 2400px; 
+} 
+/********override end******************/
+
+
+/*
+================PROGRESSBAR found in Modal============
+*/
+/* ++++PROGRESSBAR -> ARROW - TABLET++++*/
+.arrow_box_active:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-left-color: #0C9FD6;
+	border-width: 21px;
+	top: 50%;
+	margin-top:-32px;
+}
+
+/*-----------------Tablet arrow end-----------------*/
+/*===============progressbar end================
+*/
+
+/*Sets the size of the wrapper*/
+.gridContainer {
+	width: 100%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	padding-top: 1.1625%;
+	padding-bottom: 1.1625%;
+	background-color:#FFF;
+}
+/*Header element*/
+#header {
+	clear: both;
+	float: left;
+	margin-top: 0.05%;
+	margin-left: 0%;
+	width: 91%;
+	padding: 5px;
+	background-color: #FFF;
+}
+/*Logo element*/
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 16.6666%;
+}
+/*Title element*/
+#title h1{
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 79.1666%;
+}
+/*Navbar for the Tablets*/
+#navbar {
+	clear: both;
+	float: left;
+	width: 90%;
+	display: block;
+	padding: 5px;
+	margin-top: 1%;
+	margin-left: -3px;
+}
+
+/*Hides the desktop navbar*/
+#navbar-desktop {display:none;}
+
+/*The active botton in the navbar*/
+.active {
+	float: left;
+	width: 15%;
+	height: 30px;
+	margin-left: 0px;
+	text-align: center;
+	color: #EEE;
+	background-color: #0C9FD6;
+}
+/*The notactive botton in the navbar*/
+.notactive{
+	float: left;
+	width: 15%;
+	height: 30px;
+	text-align: center;
+	color: #fff;
+	background-color: #EEEEE5;
+}
+
+ul {
+	padding: 0;
+	margin-left: 1.5%;
+}
+
+label {
+padding-left:1px;
+}
+
+a {
+text-decoration:none; 
+color:#333333;
+}
+
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+a:visited {text-decoration:none;}
+
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {text-decoration:none;}
+
+/*The content area*/
+#content {
+	width: 100%;
+	margin: 0;
+	padding: 5px 0 0 0;
+	background-color: #FFF;
+}
+
+/*Hides the desktop case-box*/
+#desktop_arende_box {
+display:none;
+}
+
+/*The case-box*/
+#arende_box {
+	clear: both;
+	float: left;
+	margin-left: 0%;
+	padding-right: 3%;
+	width: 96.5%;
+	display: block;
+	padding: 5px;
+	background-color: #fff;
+}
+/*The case-box settings*/
+#arende_box_settings {
+	clear: both;
+	float: left;
+	margin-left: 1.4%;
+	padding-right: 3%;
+	width: 94%;
+	display: block;
+	padding: 5px;
+	background-color: #EEE;
+}
+/*Ongoing cases*/
+.pagaende_arende {
+	float: left;
+	width: 50%;
+	height: auto;
+	padding: 5px 0 5px 0;
+}
+/*Finished cases*/
+.avslutade_arende {
+	float: left;
+	width: 50%;
+	height: auto;
+	padding: 5px 0 5px 0;
+}
+/*Case filler*/
+.arende-filler {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 98%;
+	height: auto;
+	padding: 5px;
+}
+
+/*Tablet split up the ongoing and finished cases*/
+.pagaende_arende_small {
+	float: left;
+	width: 99%;
+	margin: 10px auto;
+	padding: 7px 0;
+	background-color:#0C9FD6;
+	color: white;
+}
+/*Ongoing cases large*/
+.pagaende_arende_large {
+	width: 99%;
+	margin: 0 auto;
+	background-color: #F4F4F2;
+}
+/*Finished cases small*/
+.avslutade_arenden_small {
+	width: 100%;
+	margin: 10px auto 0 0;
+	padding: 7px 0;
+	background-color: #0C9FD6;
+	color: #fff;
+}
+/*Finished cases large*/
+.avslutade_arenden_large {
+	display:none;
+	width: 99%;
+	margin:0 auto;
+	background-color:#F4F4F2;
+}
+/*Cases to be listed*/
+.arende-som-ska-listas {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	float: left;
+	background: #EEEEE5;
+	border-bottom: 1px solid #A5A59F;
+	border-top: 1px solid #fff;
+}
+/*Case description*/
+.arende-beskrivning {
+	width: 65%;
+	height: 40px;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+/*Case stat and date*/
+.arende-status-och-datum {
+	width: 30%;
+	height: 40px;
+	float: right;
+	margin: 5px 0 0 5px;
+	text-align: center;
+}
+/*class to <p> on every event text*/
+h4.event_descrip{
+	padding-left: 10px;
+}
+/**/
+.status_event_small, .status_event_large{
+	background-color: #EDEDE5;
+	width: 90%;
+	margin: 0 auto;
+	padding:15px 5px;
+}
+/*Status event small*/
+.status_event_small{
+	padding-top: 10px;
+	border-bottom: 1px solid #A5A59F;
+	border-top: 1px solid #fff;
+}
+/*Status event large*/
+.status_event_large{
+	padding-bottom: 10px;
+}
+
+.status_event_small h5{margin: 0;}
+
+/*Case alert is equal green banner on the case*/
+.pagaende_arende_alert {
+	position: relative;
+	background-color: #FF7400;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	margin: 0 0 0 -2px;
+	width: 100%;
+}
+/**/
+.pagaende_arende_alert:before, .pagaende_arende_alert:after {
+	content:" ";
+	border-top:6px solid #A64B00;
+	position:absolute;
+	bottom:-6px;
+}
+/**/
+.pagaende_arende_alert:before {
+	border-left:6px solid transparent;
+	left:0;
+}
+/*Ongoing case alert .....*/
+.pagaende_arende_alert:after {
+	border-right:6px solid transparent;
+	right:0;
+}
+/**/
+div.newInfoAlert {
+	font-weight: bold;
+	background-color: #EEEEE5;
+}
+/**/
+.badge {
+	float:right;
+	margin:0 10px 0 0;
+	color:#FF7400;
+	background-color:#fff;
+}
+/*-------------alert end------------------*/
+
+/*Margins for the headlines "ongoing cases and finished cases"*/
+.arende_subtitle {margin: 10px 0 10px 5px;}
+
+/*New info alert ...*/
+.newInfoAlert {
+	font-weight: bold;
+	background-color: #DCECD1;
+}
+
+.make-div-clickable {display: block;}
+
+/*Text color on <h4 class="prgr_status"> in modal-body*/
+.prgr_status {color: #333;}
+
+/**/
+.icon-angle-down {
+	margin-right: 30px;
+	float: right;
+}
+/**/
+.icon-angle-up{
+	margin-right: 30px;
+	float: right;
+}
+/**/
+.notactive i {
+	color: #333;
+	margin-top: 4px;
+}
+/**/
+.active i {
+	margin-top: 4px;
+	color:#EEE;
+}
+
+/*Footer*/
+.footer {
+	clear: both;
+	float: left;
+	display: block;
+	background-color:#EDEDE5;
+}
+.footer, .push {
+	height: auto; /* .push must be the same height as .footer */
+	width: 95.4%;
+	margin-top: 15px;
+	margin-left: 1.4%;
+}
+.footer h4 {
+	font-family:georgia;
+	text-align: center;
+	font-style:italic;
+}
+.footer p {
+	text-align: center;
+	font-size:1.1em;
+}
+
+}/*end of query*/
+
+/* 
+==============================================
+===========Mobile Layout: 481px to 321px============
+==============================================
+*/
+@media only screen and (max-width: 481px) {
+/*Sets the size of the wrapper*/
+.gridContainer {
+	width: 97%;
+	padding-top: 1.1625%;
+	padding-bottom: 1.1625%;
+	margin-left:1.2%;
+	background-color:#FFF;
+}
+/*The header element*/
+#header {
+	clear: both;
+	float: left;
+	padding-left: 0;
+	margin-top: 1%;
+	width: 100%;
+	display: block;
+	background-color: #FFF;
+}
+/*Logo elemnt*/
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 16.6666%;
+	display: block;
+}
+/**/
+#title h1 {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 79.1666%;
+	display: block;
+	text-align: center;
+}
+/*The navbrar element*/
+#navbar {
+	clear: both;
+	float: left;
+	margin: 0;
+	width: 100%;
+	display: block;
+	height: auto;
+	padding-top: 1%;
+	padding-left: 0px;
+}
+/*Hide the desktop navbar*/
+#navbar-desktop {
+	display:none;
+}
+/*The active button in the navbar*/
+.active {
+	float: left;
+	width: 49%;
+	height: 40px;
+	margin-left: 0;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	background-color: #0C9FD6;
+}
+/*The notactive button in the navbar*/
+.notactive {
+	float: left;
+	width: 49%;
+	height: 40px;
+	text-decoration: none;
+	text-align: center;
+	background-color: #EDEDE5;
+	color: black;
+}
+
+/**/
+i {padding-top: 5px;}
+a {text-decoration:none; color:#333333;}
+a:link {text-decoration:none;color:#333333;}
+a:visited {text-decoration:none;}
+a:active {text-decoration:none;color:#333333;}
+a:hover {text-decoration:none;}
+
+/*The content*/
+#content {
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding-left: 0px;
+	background-color: #fff;
+	height: auto;
+}
+/*The case box*/
+#arende_box {
+	float: left;
+	width: 98.5%;
+	display: block;
+	height: auto;
+	background-color: #fff;
+	margin-left: 0px;
+}
+/*The case box settings*/
+#arende_box_settings {
+	float:left;
+	width: 94.6%;
+	display: block;
+	height: auto;
+	margin-left: 1.1625%;
+	background-color: #EEE;
+}
+/*The case filler*/
+.arende-filler {
+	clear: both;
+	float: left;
+	width: width: 98.675%;
+	display: block;
+	height: auto;
+	padding: 5px 0 5px 0;
+	margin-left: 0px;
+}
+/*The ongoing cases large*/
+.pagaende_arende_large {
+	width: 100%;
+	margin:0 auto;
+	background-color:#F4F4F2;
+}
+/*The ongoing cases small*/
+.pagaende_arende_small {
+	width: 100%;
+	float: left;
+	padding: 7px 0;
+	background-color: #0C9FD6;
+	color: #fff;
+}
+/*Cases to list*/
+.arende-som-ska-listas {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	float: left;
+	background: #EEEEE5;
+	padding: 5px 0;
+	border-bottom: 1px solid #A5A59F;
+	border-top: 1px solid #fff;
+}
+/*ongoing cases*/
+.pagaende_arende {
+	float: left;
+	width: 100%;
+	display: block;
+	padding: 7px 0;
+	margin-bottom: 0;
+	margin-left: 0px;
+}
+/*Finished cases*/
+.avslutade_arende {
+	float: left;
+	width: 100%;
+	display: block;
+	padding: 7px 0;
+	margin-bottom: 0;
+}
+/*Cases description*/
+.arende-beskrivning {
+	width: 60%;
+	height: 40px;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+/*The case stat and date*/
+.arende-status-och-datum {
+	width: 35%;
+	height: 40px;
+	float: right;
+	text-align: center;
+	margin: 5px 0 0 5px;
+}
+
+/*margins for the headlines "Ongoing cases and Finished cases*/
+.arende_subtitle{margin: 10px 0 10px 15px;}
+
+/**/
+.newInfoAlert {
+	font-weight: bold;
+	background-color: #DCECD1;
+}
+	
+.make-div-clickable {display: block;}
+
+/*Text-color on the <h4 class="prgr_status"> i modal-body*/
+.prgr_status {color: #333;}
+
+/**/
+.icon-angle-down {
+	margin: 0 30px 0 0;
+	padding: 0;
+	float: right;
+}
+/**/
+.icon-angle-up {
+	margin: 0 30px 0 0;
+	padding: 0;
+	float: right;
+}
+
+/*Footer*/
+.footer {
+	clear: both;
+	float: left;
+	display: block;
+	background-color:#EDEDE5;
+	margin-bottom: 1%;
+}
+.footer, .push {
+	height: auto; /* .push must be the same height as .footer */
+	width: 96.2%;
+	margin-top: 15px;
+	margin-left:1.2%;
+}	
+.footer h4 {
+	font-family:georgia;
+	text-align: center;
+	font-style:italic;
+}
+.footer p {
+	text-align: center;
+	font-size:1.1em;
+}
+
+/*====PROGRESSBAR====*/
+ol.progressbar li {
+	display: inline-block;
+	text-align: center;
+	width: auto;
+	vertical-align: top;
+	height: 30px;
+	margin-right: 6%;
+	padding-top: 12px;
+}
+/*progressbar end*/
+
+}/*end of query*/
+
+/* 
+==============================================
+===========Mobile Layout: 321px and below===========
+==============================================
+*/
+@media only screen and (max-width: 321px) {
+/*The size of the wrapper*/
+.gridContainer {
+	width: 96.5%;
+	padding-top: 1.1625%;
+	padding-bottom: 1.1625%;
+	background-color:#FFF;
+}
+/*The header element*/
+#header {
+	clear: both;
+	float: left;
+	padding-left: 1%;
+	margin-top: 1%;
+	width: 94%;
+	display: block;
+	background-color: #FFF;
+	border-radius: 5px;
+	box-shadow: none;
+}
+/*The logo element*/
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 16.6666%;
+	display: block;
+}
+/*Title element*/
+#title h1{
+	clear: none;
+	float: right;
+	margin-left: 0;
+	width: 79.1666%;
+	display: block;
+	text-align: center;
+}
+/*Navbar element*/
+#navbar {
+	clear: both;
+	float: left;
+	margin: 0;
+	width: 100%;
+	display: block;
+	height: auto;
+	padding-top: 1%;
+	margin-left: -2px;
+}
+
+/*Hides the desktop navbar*/
+#navbar-desktop {display:none;}
+
+/*The active button in the navbar*/
+.active {
+	float: left;
+	width: 50%;
+	height: 40px;
+	margin-left: 0;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	background-color: #0C9FD6;
+}
+/*The notactive button in the navbar*/
+.notactive {
+	float: left;
+	width: 50%;
+	height: 40px;
+	text-decoration: none;
+	text-align: center;
+	background-color: #EDEDE5;
+	color: black;
+}
+
+/**/
+i {padding-top: 5px;}
+ul {padding: 0; margin-left: 2.3%}
+a {text-decoration:none; color:#333333;}
+a:link {text-decoration:none;color:#333333;}
+a:visited {text-decoration:none;}
+a:active {text-decoration:none;color:#333333;}
+a:hover {text-decoration:none;}
+
+/*The content*/
+#content {
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding-left: 0%;
+	background-color: #fff;
+	height: auto;
+}
+/*The case box*/
+#arende_box {
+	float: left;
+	width: 99.5%;
+	display: block;
+	height: auto;
+	margin-left: 0px;
+	background-color: #fff;
+}
+/*The case box settings*/
+#arende_box_settings {
+	float:left;
+	width: 94.5%;
+	display: block;
+	height: auto;
+	margin-left: 1.1625%;
+	background-color: #EEE;
+}
+/*The case filler*/
+.arende-filler {
+	clear: both;
+	float: left;
+	width: width: 98.675%;
+	display: block;
+	height: auto;
+	padding: 5px 0 5px 0;
+}
+/*Ongoing cases large*/
+.pagaende_arende_large{
+	width: 100%;
+	margin:0 auto;
+	background-color:#F4F4F2;
+}
+/*The ongoing cases small*/
+.pagaende_arende_small {
+	width: 100%;
+	float: left;
+	padding: 7px 0;
+	background-color: #0C9FD6;
+	color: #fff;
+}
+/*Cases to list*/
+.arende-som-ska-listas {
+	height: auto;
+	float: left;
+}
+/**/
+.arende_beskrivning{padding-left: 10px;	}
+
+/*Ongoing cases*/
+.pagaende_arende {
+	float: left;
+	width: 100%;
+	display: block;
+	padding: 7px 0;
+	margin-bottom: 0;
+}
+/*Finished cases*/
+.avslutade_arende {
+	float: left;
+	width: 100%;
+	display: block;
+	padding: 7px 0;
+	margin-bottom: 0;
+}
+/*Case desription*/
+.arende-beskrivning {
+	width: 60%;
+	height: 40px;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+/*Case stat and date*/
+.arende-status-och-datum {
+	width: 35%;
+	height: 40px;
+	float: right;
+	text-align: center;
+	margin: 5px 0 0 5px;
+}
+
+/*Margins for the headlines "Ongoing cases and Finished cases*/
+.arende_subtitle {margin: 10px 0 10px 15px;}
+
+/**/
+.newInfoAlert {
+	font-weight: bold;
+	background-color: #DCECD1;
+}
+	
+.make-div-clickable {
+display: block;
+}
+
+/*Text-color on the <h4 class="prgr_status"> in modal-body*/
+.prgr_status {color: #333;}
+
+/**/
+.icon-angle-down {
+	margin: 0 30px 0 0;
+	padding: 0;
+	float: right;
+}
+/**/
+.icon-angle-up{
+	margin: 0 30px 0 0;
+	padding: 0;
+	float: right;
+}
+
+/*Footer*/
+.footer {
+	clear: both;
+	float: left;
+	display: block;
+}
+.footer, .push {
+	height: auto; /* .push must be the same height as .footer */
+	width: 97%;
+	margin-top: 15px;
+	margin-left: 1.9%;
+	margin-bottom: 4%;
+}	
+.footer h4 {
+	font-family:georgia;
+	text-align: center;
+	font-style:italic;
+}
+.footer p {
+	text-align: center;
+	font-size:1.1em;
+}
+
+/*++++PROGRESSBAR -> ARROWS - MOBILE++++*/
+.prgr_active { 
+	/*New line under "pending" in mobile*/
+	line-height:10px;
+	margin-bottom:10px;
+}
+/*-----------------arrow end / Mobil-----------------*/
+
+/*====PROGRESSBAR====*/
+ol.progressbar li {
+	display: inline-block;
+	text-align: center;
+	width: 27.9%;
+	vertical-align: top;
+	height: 30px;
+	margin-right: 7%;
+	padding-top: 12px;
+}
+/*progressbar end*/
+
+/********OVERRIDE FOR BOOTSTRAPS MODAL***/
+.modal {
+	width: 90%; 
+	left: 5%; /* (100%-width)/2 */
+	margin: auto auto auto auto; /* centrerar*/
+	overflow-y: scroll; /*  säkrar att modal är scroll-able */
+	-webkit-overflow-scrolling: touch; /* undviker 2finger scroll på iOS    */
+	height:100%;
+	border-radius: 0;
+}
+/********override end******************/
+
+
+}/*/query*/
